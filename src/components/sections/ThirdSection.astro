@@ -1,0 +1,99 @@
+---
+import Badge from '../Badge.astro';
+import VehiclesCard from '../VehiclesCard.astro';
+---
+
+<section id="section-2" class="h-screen flex flex-col">
+  <div class="h-[15vh] flex justify-center items-center w-full gap-[120px]">
+    <h1 class="font-[microgramma] text-[36px] text-[#c8f600]">CATEGORÍAS</h1>
+  </div>
+  <div class="fondo-utv object-cover h-full flex flex-row">
+    <VehiclesCard className="moto-1" title="MOTOS" />
+    <VehiclesCard className="quad-1 border-x-[8px]" title="QUADS" />
+    <VehiclesCard className="utv-1" title="UTV" />
+  </div>
+</section>
+
+<style>
+  #section-2 {
+    width: 100%;
+
+    .moto-1 {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.05) 17.79%,
+          rgba(0, 0, 0, 0.2) 74%,
+          rgba(0, 0, 0, 0.6) 83%,
+          #000 90%
+        ),
+        url('/img/moto-1.webp') lightgray 50% / cover no-repeat;
+    }
+
+    .moto-1:hover {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.05) 17.79%,
+          rgba(0, 0, 0, 0.2) 74%,
+          rgba(0, 0, 0, 0.6) 83%,
+          #000 90%
+        ),
+        url('/img/moto-2.webp') lightgray 50% / cover no-repeat;
+    }
+
+    .quad-1 {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.05) 17.79%,
+          rgba(0, 0, 0, 0.2) 74%,
+          rgba(0, 0, 0, 0.6) 83%,
+          #000 90%
+        ),
+        url('/img/quad-1.webp') lightgray 50% / cover no-repeat;
+    }
+
+    .quad-1:hover {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.05) 17.79%,
+          rgba(0, 0, 0, 0.2) 74%,
+          rgba(0, 0, 0, 0.6) 83%,
+          #000 90%
+        ),
+        url('/img/quad-2.webp') lightgray 50% / cover no-repeat;
+    }
+
+    .utv-1 {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.05) 17.79%,
+          rgba(0, 0, 0, 0.2) 74%,
+          rgba(0, 0, 0, 0.6) 83%,
+          #000 90%
+        ),
+        url('/img/utv-1.webp') lightgray 50% / cover no-repeat;
+    }
+
+    .utv-1:hover {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.05) 17.79%,
+          rgba(0, 0, 0, 0.2) 74%,
+          rgba(0, 0, 0, 0.6) 83%,
+          #000 90%
+        ),
+        url('/img/utv-2.webp') lightgray 50% / cover no-repeat;
+    }
+  }
+</style>

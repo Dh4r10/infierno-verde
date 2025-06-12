@@ -1,1 +1,32 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'microgramma';
+  src: url('/fonts/microgramma.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'inter-regular';
+  src: url('/fonts/inter-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'inter-boldItalic';
+  src: url('/fonts/inter-boldItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'inter-semiBold';
+  src: url('/fonts/inter-semiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'inter-bold';
+  src: url('/fonts/inter-bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

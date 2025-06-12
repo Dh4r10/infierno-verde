@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="badge-container">
+  <p class="font-[microgramma] text-[#c8f600] text-[36px]">{title}</p>
+  <span class="font-[inter-regular] text-[#e7e7e7] text-[14px]">{subtitle}</span
+  >
+</div>
+
+<style>
+  .badge-container {
+    display: flex;
+    padding: 0px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

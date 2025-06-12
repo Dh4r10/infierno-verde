@@ -1,0 +1,56 @@
+---
+import Badge from '../Badge.astro';
+---
+
+<section id="section-2" class="h-screen flex flex-col">
+  <div class="h-[15vh] flex justify-center items-center w-full gap-[120px]">
+    <Badge title="6,000 +" subtitle="ASISTENTES" />
+    <Badge title="200 +" subtitle="CORREDORES" />
+    <Badge title="16" subtitle="SHOWS" />
+    <Badge title="2" subtitle="DÍAS" />
+  </div>
+  <div class="fondo-utv object-cover h-full relative">
+    <div class="fondo-utv__descripcion absolute top-25 left-0 w-fit text-white">
+      <h1 class="font-[microgramma] text-[36px]">
+        INFIERNO <span class="text-[#c8f600]">VERDE</span>
+      </h1>
+      <p class="font-[inter-regular] text-[24px]">
+        Somos una de las competencias de enduro <br /> más intensas y reconocidas
+        del Perú. Con sede <br /> en la ciudad de Tarapoto. Su desafiante <br />
+        recorrido a través de terrenos extremos <br /> le ha valido el nombre de
+        ser una <br /> verdadera prueba de resistencia, <br /> técnica y adrenalina.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-2 {
+    width: 100%;
+
+    .fondo-utv {
+      background:
+        linear-gradient(
+          180deg,
+          #000 0%,
+          rgba(0, 0, 0, 0) 17.79%,
+          rgba(0, 0, 0, 0.3) 75.48%,
+          #000 99%
+        ),
+        url('/img/fondo-utv.webp') lightgray 50% / cover no-repeat;
+
+      .fondo-utv__descripcion {
+        margin: 0 80px;
+
+        /* background-color: #0000003c; */
+        background-color: red;
+        /* background: radial-gradient(circle, #0000003c 60%, transparent 100%); */
+        background: radial-gradient(
+          ellipse 33% 52% at 70% 50%,
+          #0000003c 60%,
+          transparent 100%
+        );
+      }
+    }
+  }
+</style>

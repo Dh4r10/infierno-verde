@@ -1,0 +1,15 @@
+---
+interface Props {
+  className?: string;
+  title: string;
+}
+
+const { className, title } = Astro.props;
+
+const baseClass = `vehicles-card cursor-pointer h-full w-full bg-red-300 flex justify-center items-end ${className}`;
+---
+
+<div class=`${baseClass}`>
+  <slot />
+  <p class="font-[microgramma] text-[28px] text-white pb-4">{title}</p>
+</div>

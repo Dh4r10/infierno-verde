@@ -1,0 +1,37 @@
+---
+type ButtonType = 'default' | 'outlined';
+
+interface Props {
+  type?: ButtonType;
+}
+
+const { type = 'default' } = Astro.props;
+
+const typeClassMap: Record<ButtonType, string> = {
+  default: 'bg-[#c8f600] text-black hover:bg-[#CFE862]',
+  outlined:
+    'bg-transparend text-[#c8f600] outline outline-2 outline-[#c8f600] hover:bg-[#C8F600]/14',
+};
+
+const baseClass =
+  'vehicle-card cursor-pointer px-[24px] py-[10px] font-[inter-semiBold] text-[15px]';
+
+const finalClass = `${baseClass} ${typeClassMap[type]}`;
+---
+
+<button class={finalClass}>
+  <slot />
+</button>
+
+<style>
+  .vehicle-card {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.05) 17.79%,
+      rgba(0, 0, 0, 0.2) 74%,
+      rgba(0, 0, 0, 0.6) 83%,
+      #000 90%
+    );
+  }
+</style>

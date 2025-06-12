@@ -1,0 +1,79 @@
+---
+import Button from '../Button.astro';
+---
+
+<section id="section-1" class="relative flex flex-col">
+  <div class="fondo-principal flex justify-center items-center w-full h-screen">
+    <div
+      class="fondo-principal_text font-[microgramma] flex flex-col justify-center items-center mb-10"
+    >
+      <p class="text-[36px] tracking-widest">TARAPOTO - 2025</p>
+      <p class="text-[20px] font-[inter-bold]">MOTO | QUAD | UTV</p>
+    </div>
+  </div>
+  <div class="h-[17vh]"></div>
+  <div class="presentacion-container absolute bg-transparent w-full my-3">
+    <div class="presentacion-container__text">
+      <p class="text-[32px] text-[#C8F600] flex items-center gap-1">
+        EL ENDURO <span
+          class="presentacion-container__text-separador text-[#E7E7E7] pb-1"
+          >|</span
+        >
+        <span
+          class="presentacion-container__text-fecha text-[#E7E7E7] text-[16px]"
+          >04/06/2025</span
+        >
+      </p>
+      <p class="text-[36px]">MAS GRANDE DEL PERÚ</p>
+    </div>
+    <div class="presentacion-container__button">
+      <Button type="outlined"> CONTÁCTANOS </Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-1 {
+    position: relative;
+    width: 100%;
+
+    .fondo-principal {
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 71.85%, #000 100%),
+        url('/img/fondo-principal.webp') lightgray 50% / cover no-repeat;
+    }
+
+    .presentacion-container {
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 80px;
+
+      height: 20vh;
+
+      .presentacion-container__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        font-family: 'microgramma', sans-serif;
+        color: #e7e7e7;
+
+        .presentacion-container__text-separador {
+          font-family:
+            'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .presentacion-container__text-fecha {
+          font-family: 'inter-boldItalic', sans-serif;
+        }
+      }
+
+      .presentacion-container__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+</style>
