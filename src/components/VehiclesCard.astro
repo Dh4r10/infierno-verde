@@ -4,26 +4,51 @@ interface Props {
   title: string;
   defaultImage: string;
   hoverImage: string;
+  textHover: string;
+  subTextHover: string;
 }
 
-const { className, title, defaultImage, hoverImage } = Astro.props;
+const { className, title, defaultImage, hoverImage, textHover, subTextHover } =
+  Astro.props;
 
-const baseClass = `vehicles-card cursor-pointer h-full w-full bg-red-300 flex justify-center items-end ${className}`;
+const baseClass = `vehicles-card cursor-pointer h-full w-full bg-red-300 ${className}`;
 ---
 
 <div
   class={`${baseClass}`}
   style={`--default-img: url(${defaultImage}); --hover-img: url(${hoverImage});`}
 >
-  <slot />
-  <p class="font-[microgramma] text-[28px] text-white pb-4">{title}</p>
+  <div class="flex h-[88%]">
+    <div
+      class="card-data flex flex-col h-full justify-center items-center px-24"
+    >
+      <h1 class="font-[microgramma] text-[28px] text-white text-center">
+        {textHover}
+      </h1>
+      <p class="font-[microgramma] text-[20px] text-[#C8F600]">
+        {subTextHover}
+      </p>
+    </div>
+  </div>
+  <p
+    class="font-[microgramma] text-[28px] text-white relative pb-1 z-10 flex flex-auto justify-center items-center"
+  >
+    {title}
+  </p>
 </div>
 
 <style define:vars={{ defaultImage, hoverImage }}>
   .vehicles-card {
+    display: flex;
+    flex-direction: column;
+
     position: relative;
     overflow: hidden;
 
+    /*
+      Mantenemos el degradado original Y la imagen por defecto aquí.
+      Este degradado será visible SIEMPRE.
+    */
     background:
       linear-gradient(
         180deg,
@@ -44,15 +69,24 @@ const baseClass = `vehicles-card cursor-pointer h-full w-full bg-red-300 flex ju
     width: 100%;
     height: 100%;
     opacity: 0;
+    z-index: 0; /* Asegura que la imagen de hover esté debajo del contenido */
 
+    /*
+      AJUSTE CLAVE AQUÍ:
+      Este pseudo-elemento contendrá la IMAGEN DE HOVER Y SU PROPIO DEGRADADO NEGRO SEMITRANSPARENTE.
+      Cuando `opacity` sea 1, esta capa se superpondrá a la imagen por defecto
+      y a su degradado original, pero como queremos mantener el degradado inferior,
+      tendremos que replicar el efecto en la parte de abajo de este gradiente.
+    */
     background:
       linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.05) 17.79%,
-        rgba(0, 0, 0, 0.2) 74%,
-        rgba(0, 0, 0, 0.6) 83%,
-        #000 90%
+        rgba(0, 0, 0, 0.4) 0%,
+        /* Inicia con la capa negra semi-transparente */ rgba(0, 0, 0, 0.6) 74%,
+        /* Ajusta la opacidad para que el "fade" inferior parezca continuo */
+          rgba(0, 0, 0, 0.9) 83%,
+        /* Aumenta la opacidad para coincidir con el final */ #000 90%
+          /* Termina con el negro sólido como en el original */
       ),
       var(--hover-img) lightgray 50% / cover no-repeat;
 
@@ -60,6 +94,27 @@ const baseClass = `vehicles-card cursor-pointer h-full w-full bg-red-300 flex ju
   }
 
   .vehicles-card:hover::before {
+    opacity: 1; /* Esto revela la imagen de hover CON SU DEGRADADO DE CAPA NEGRA */
+  }
+
+  /* Estilos para el card-data div */
+  .card-data {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+    z-index: 2; /* Asegura que card-data esté por encima de la imagen de hover */
+    pointer-events: none;
+  }
+
+  .vehicles-card:hover .card-data {
     opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Aseguramos que el título siempre esté visible y por encima de todo */
+  .vehicles-card p {
+    position: relative;
+    z-index: 3;
   }
 </style>
