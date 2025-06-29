@@ -1,0 +1,62 @@
+---
+import Calender from '../Calender.astro';
+---
+
+<section id="section-4" class="h-screen flex flex-col">
+  <div class="h-[15vh] flex justify-center items-center w-full gap-[120px]">
+    <h1 class="font-[microgramma] text-[36px] text-[#c8f600]">CALENDARIO</h1>
+  </div>
+  <div class="fondo-utv object-cover h-full flex flex-row gap-5">
+    <div class="flex flex-col flex-1/2 justify-center pb-10">
+      <div class="flex flex-col gap-y-7">
+        <h1
+          class="font-[microgramma] text-[32px] text-white flex items-center gap-1"
+        >
+          DÍA 1 <span
+            class="presentacion-container__text-separador text-[#E7E7E7] pb-1"
+            >|</span
+          >
+          <span class="font-[inter-boldItalic] text-[#E7E7E7] text-[16px]"
+            >23/08/2025</span
+          >
+        </h1>
+        <div class="flex flex-col gap-y-5">
+          <Calender vehicle="MOTO" />
+          <Calender vehicle="QUADS" />
+          <Calender vehicle="UTV" />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col flex-1/2 justify-center pb-10">
+      <div class="flex flex-col gap-y-7">
+        <h1
+          class="font-[microgramma] text-[32px] text-white flex items-center gap-1"
+        >
+          DÍA 2 <span
+            class="presentacion-container__text-separador text-[#E7E7E7] pb-1"
+            >|</span
+          >
+          <span class="font-[inter-boldItalic] text-[#E7E7E7] text-[16px]"
+            >24/08/2025</span
+          >
+        </h1>
+        <div class="flex flex-col gap-y-5">
+          <Calender vehicle="MOTO" />
+          <Calender vehicle="QUADS" />
+          <Calender vehicle="UTV" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-4 {
+    width: 100%;
+    padding: 0 80px;
+
+    .presentacion-container__text-separador {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    }
+  }
+</style>

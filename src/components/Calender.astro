@@ -1,0 +1,35 @@
+---
+type Vehicle = 'MOTO' | 'QUADS' | 'UTV';
+
+interface Props {
+  vehicle: Vehicle;
+}
+
+const { vehicle } = Astro.props;
+---
+
+<div
+  class="border-2 border-[#C8F600] text-white flex justify-between p-4 bg-white/[17%]"
+>
+  <div>
+    <p class="font-[microgramma] text-[24px] text-[#c8f600]">{vehicle}</p>
+  </div>
+  <div class="w-[40%]">
+    <div class="flex justify-between">
+      <p class="font-[inter-regular]">Carrera 1</p>
+      <p class="font-[inter-semiBold]">10:30 A.M</p>
+    </div>
+    <div class="flex justify-between">
+      <p class="font-[inter-regular]">Carrera 2</p>
+      <p class="font-[inter-semiBold]">11:00 A.M</p>
+    </div>
+    <div class="flex justify-between">
+      <p class="font-[inter-regular]">Carrera 3</p>
+      <p class="font-[inter-semiBold]">12:30 P.M</p>
+    </div>
+    <div class="flex justify-between">
+      <p class="font-[inter-regular]">Carrera 1</p>
+      <p class="font-[inter-semiBold]">01:00 P.M</p>
+    </div>
+  </div>
+</div>

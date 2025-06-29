@@ -1,0 +1,113 @@
+---
+import Image from 'astro/components/Image.astro';
+import Badge from '../Badge.astro';
+import Button from '../Button.astro';
+---
+
+<section id="section-5" class="h-screen flex flex-col">
+  <div class="h-[15vh] flex justify-center items-center w-full">
+    <h1 class="font-[microgramma] text-[36px] text-[#c8f600]">UBICACIÓN</h1>
+  </div>
+  <div class="flex h-full">
+    <!-- Columna izquierda -->
+    <div class="w-2/4 flex flex-col">
+      <div class="h-[90%]">
+        <Image
+          src="/img/img-local/mapa-1.png"
+          alt="Mapa de Tarapoto"
+          class="object-cover w-full h-full"
+          loading="lazy"
+          width={1920}
+          height={1080}
+        />
+      </div>
+      <div class="h-[10%] flex justify-center items-center">
+        <p class="font-[microgramma] text-[20px] text-white">
+          2024 - <span class="text-[#c8f600]">CIRCUITO</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Columna derecha con textura metálica -->
+    <div class="relative w-2/4 flex flex-col bg-[#2a2a2b] overflow-hidden">
+      <!-- Textura superpuesta -->
+      <div
+        class="absolute inset-0 bg-[url('/img/img-local/textura-metalica.png')] bg-cover bg-center opacity-40 pointer-events-none"
+      >
+      </div>
+
+      <div
+        class="h-[90%] flex flex-col justify-center items-center gap-4 pb-4 relative z-10"
+      >
+        <Image
+          src="/img/img-local/tornillo.png"
+          alt="Tornillo"
+          class="absolute top-3 left-3"
+          loading="lazy"
+          width={30}
+          height={30}
+        />
+        <Image
+          src="/img/img-local/tornillo.png"
+          alt="Tornillo"
+          class="absolute top-3 right-3"
+          loading="lazy"
+          width={30}
+          height={30}
+        />
+        <Image
+          src="/img/img-local/tornillo.png"
+          alt="Tornillo"
+          class="absolute bottom-3 left-3"
+          loading="lazy"
+          width={30}
+          height={30}
+        />
+        <Image
+          src="/img/img-local/tornillo.png"
+          alt="Tornillo"
+          class="absolute bottom-3 right-3"
+          loading="lazy"
+          width={30}
+          height={30}
+        />
+        <Image
+          src="/img/img-local/martin-cardenas.png"
+          alt="Logo Martin Cardenas"
+          class="w-[40%]"
+          loading="lazy"
+          width={600}
+          height={600}
+        />
+        <p class="font-[microgramma] text-[24px] text-white text-center">
+          <span class="text-white/85">PISTA EMBLEMA</span>
+        </p>
+        <div class="flex items-center gap-6">
+          <p class="w-fit font-[microgramma] text-white text-center">
+            <span class="text-[20px] text-white/85">
+              UBICADO EN:
+              <span class="text-[#fe8415]">
+                CARRETERA <br /> FERNANDO BELAUNDE TERRY SUR
+              </span>
+              <br /> KM 4.5
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="h-[10%] flex justify-center items-center relative z-10 bg-black"
+      >
+        <p class="font-[microgramma] text-[20px] text-white">
+          2025 - <span class="text-[#c8f600]">PROXIMAMENTE</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-5 {
+    width: 100%;
+  }
+</style>

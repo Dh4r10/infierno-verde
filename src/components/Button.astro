@@ -10,13 +10,13 @@ const { type = 'default' } = Astro.props;
 const typeClassMap: Record<ButtonType, string> = {
   default: 'bg-[#c8f600] text-black hover:bg-[#CFE862]',
   outlined:
-    'bg-transparend text-[#c8f600] outline outline-2 outline-[#c8f600] hover:bg-[#C8F600]/14',
+    'bg-transparent text-[#c8f600] outline outline-2 outline-[#c8f600] hover:bg-[#C8F600]/15',
 };
 
 const baseClass =
   'vehicle-card cursor-pointer px-[24px] py-[10px] font-[inter-semiBold] text-[15px]';
 
-const finalClass = `${baseClass} ${typeClassMap[type]}`;
+const finalClass = `${baseClass} ${typeClassMap[type]} ${type}`;
 ---
 
 <button class={finalClass}>
@@ -33,5 +33,16 @@ const finalClass = `${baseClass} ${typeClassMap[type]}`;
       rgba(0, 0, 0, 0.6) 83%,
       #000 90%
     );
+    background-color: transparent;
+  }
+
+  .vehicle-card.default:hover {
+    background-color: rgba(207, 232, 98, 0.3);
+    background-blend-mode: overlay;
+  }
+
+  .vehicle-card.outlined:hover {
+    background-color: rgba(200, 246, 0, 0.15);
+    background-blend-mode: overlay;
   }
 </style>
