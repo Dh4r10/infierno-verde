@@ -1,145 +1,63 @@
 ---
 import { Image } from 'astro:assets';
 import Button from '../Button.astro';
----
-
-<!-- ---
-import { Image } from 'astro:assets';
-import Button from '../Button.astro';
+import Header from '../Header.astro';
 ---
 
 <section id="section-1" class="relative flex flex-col">
-  <div class="fondo-principal flex justify-center items-center w-full h-screen">
+  <div
+    class="fondo-principal flex flex-col justify-center items-center w-full h-screen"
+  >
+    <div class="absolute top-0 w-full h-[10vh] z-10">
+      <Header />
+    </div>
     <div
-      class="fondo-principal_text font-[microgramma] flex flex-col justify-center items-center mb-48"
+      class="fondo-principal_text font-[microgramma] flex flex-col justify-center items-center md:mb-56 mb-40"
     >
       <div class="radial-gradient-background">
         <Image
-          src="/img/img-local/logo.png"
+          src="/img/logo-original.webp"
           alt="Logo Tarapoto"
-          class="w-[400px]"
+          class="md:w-[280px] opacity-80"
           loading="lazy"
           width={200}
           height={200}
         />
       </div>
-      <p class="text-[36px] tracking-widest">TARAPOTO - 2025</p>
-      <p class="text-[20px] font-[inter-bold]">MOTO | QUAD | UTV</p>
-    </div>
-  </div>
-  <div class="h-[17vh]"></div>
-  <div class="presentacion-container absolute bg-transparent w-full my-3">
-    <div class="presentacion-container__text">
-      <p class="text-[32px] text-[#C8F600] flex items-center gap-1">
-        EL ENDURO <span
-          class="presentacion-container__text-separador text-[#E7E7E7] pb-1"
-          >|</span
-        >
-        <span
-          class="presentacion-container__text-fecha text-[#E7E7E7] text-[16px]"
-          >23/08/2025</span
-        >
+      <p
+        class="md:text-[34px] text-[20px] md:pt-0 pt-2 tracking-widest text-center"
+      >
+        TARAPOTO - 2025
       </p>
-      <p class="text-[36px]">MAS GRANDE DEL PERÚ</p>
-    </div>
-    <div class="presentacion-container__button">
-      <Button type="outlined"> CONTÁCTANOS </Button>
-    </div>
-  </div>
-</section>
-
-<style>
-  #section-1 {
-    position: relative;
-    width: 100%;
-
-    .fondo-principal {
-      background:
-        linear-gradient(180deg, rgba(0, 0, 0, 0) 71.85%, #000 100%),
-        url('/img/fondo-principal.webp') lightgray 50% / cover no-repeat;
-    }
-
-    .presentacion-container {
-      bottom: 0;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 80px;
-
-      height: 20vh;
-
-      .presentacion-container__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        font-family: 'microgramma', sans-serif;
-        color: #e7e7e7;
-
-        .presentacion-container__text-separador {
-          font-family:
-            'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        .presentacion-container__text-fecha {
-          font-family: 'inter-boldItalic', sans-serif;
-        }
-      }
-
-      .presentacion-container__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    .radial-gradient-background {
-      background: radial-gradient(
-        circle at center,
-        rgba(0, 0, 0, 0.9) 0%,
-        /* Negro casi opaco en el centro */ rgba(0, 0, 0, 0.7) 10%,
-        /* Negro con 70% de opacidad a mitad de camino */ rgba(0, 0, 0, 0) 50%
-          100% /* Completamente transparente en los bordes */
-      );
-      height: 100%; /* Importante para que el gradiente tenga espacio para verse */
-    }
-  }
-</style> -->
-<section id="section-1" class="relative flex flex-col">
-  <div class="fondo-principal flex justify-center items-center w-full h-screen">
-    <div
-      class="fondo-principal_text font-[microgramma] flex flex-col justify-center items-center mb-48"
-    >
-      <div class="radial-gradient-background">
-        <Image
-          src="/img/img-local/logo.png"
-          alt="Logo Tarapoto"
-          class="w-[400px]"
-          loading="lazy"
-          width={200}
-          height={200}
-        />
-      </div>
-      <p class="text-[36px] tracking-widest">TARAPOTO - 2025</p>
-      <p class="text-[20px] font-[inter-bold]">MOTO | QUAD | UTV</p>
+      <p class="md:text-[20px] text-[12px] font-[inter-bold]">
+        MOTO | QUAD | UTV
+      </p>
     </div>
   </div>
   <div class="h-[17vh]"></div>
-  <div class="presentacion-container absolute bg-transparent w-full my-3">
+  <div
+    class="presentacion-container md:px-[80px] px-[30px] absolute bg-transparent w-full mt-3 gap-10"
+  >
     <div class="presentacion-container__text">
-      <p class="text-[32px] text-[#C8F600] flex items-center gap-1">
+      <p
+        class="md:text-[32px] text-[12px] text-[#C8F600] flex items-center gap-1"
+      >
         EL ENDURO
         <span class="presentacion-container__text-separador text-[#E7E7E7] pb-1"
           >|</span
         >
         <span
-          class="presentacion-container__text-fecha text-[#E7E7E7] text-[16px]"
+          class="presentacion-container__text-fecha text-[#E7E7E7] md:text-[16px] text-[8px]"
           >23/08/2025</span
         >
       </p>
-      <p class="text-[36px]">MAS GRANDE DEL PERÚ</p>
+      <p class="md:text-[36px] text-[18px]">MAS GRANDE DEL PERÚ</p>
     </div>
     <div class="presentacion-container__button">
-      <Button type="outlined"> CONTÁCTANOS </Button>
+      <Button type="outlined">
+        <p class="md:block hidden">CONTÁCTANOS</p>
+        <p class="md:hidden block text-[12px]">C</p>
+      </Button>
     </div>
   </div>
 </section>
@@ -159,7 +77,6 @@ import Button from '../Button.astro';
       bottom: 0;
       display: flex;
       justify-content: space-between;
-      padding: 0 80px;
       height: 20vh;
 
       .presentacion-container__text {

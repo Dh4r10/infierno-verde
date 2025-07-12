@@ -9,12 +9,16 @@ const { vehicle } = Astro.props;
 ---
 
 <div
-  class="border-2 border-[#C8F600] text-white flex justify-between p-4 bg-white/[17%]"
+  class="border-2 border-[#C8F600] text-white flex md:flex-row flex-col justify-between p-4 bg-white/[17%] md:m-0 mx-4 md:gap-0 gap-2"
 >
   <div>
-    <p class="font-[microgramma] text-[24px] text-[#c8f600]">{vehicle}</p>
+    <p
+      class="font-[microgramma] md:text-[24px] text-[13px] text-[#c8f600] md:text-start text-center"
+    >
+      {vehicle}
+    </p>
   </div>
-  <div class="w-[40%]">
+  <div class="md:w-[40%] md:text-[16px] text-[12px]">
     <div class="flex justify-between">
       <p class="font-[inter-regular]">Carrera 1</p>
       <p class="font-[inter-semiBold]">10:30 A.M</p>

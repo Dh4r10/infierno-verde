@@ -2,13 +2,15 @@
 import VehiclesCard from '../VehiclesCard.astro';
 ---
 
-<section id="section-3" class="h-screen flex flex-col">
-  <div class="h-[15vh] flex justify-center items-center w-full gap-[120px]">
-    <h1 class="font-[microgramma] text-[36px] text-[#c8f600]">CATEGORÍAS</h1>
+<section id="categorias" class="md:h-screen flex flex-col">
+  <div class="md:p-8 p-6 flex justify-center items-center w-full">
+    <h1 class="font-[microgramma] md:text-[36px] text-[20px] text-[#c8f600]">
+      CATEGORÍAS
+    </h1>
   </div>
-  <div class="fondo-utv object-cover h-full flex flex-row">
+  <div class="fondo-utv object-cover md:h-full flex md:flex-row flex-col">
     <VehiclesCard
-      className="moto-1"
+      className="moto-1 md:h-full h-screen"
       title="MOTOS"
       defaultImage="/img/moto-1.webp"
       hoverImage="/img/moto-2.webp"
@@ -16,15 +18,15 @@ import VehiclesCard from '../VehiclesCard.astro';
       subTextHover="#MARTINCARDENAS"
     />
     <VehiclesCard
-      className="quad-1 border-x-[8px]"
+      className="quad-1 md:border-x-[8px] md:h-full h-screen"
       title="QUADS"
-      defaultImage="/img/quad-1.webp"
+      defaultImage="/img/quad-1.webp "
       hoverImage="/img/quad-2.webp"
       textHover="EXPERIMENTA LA ADRENALINA DEL CAMINO A LA GLORIA"
       subTextHover="#ENDURO"
     />
     <VehiclesCard
-      className="utv-1"
+      className="utv-1 md:h-full h-screen"
       title="UTV"
       defaultImage="/img/utv-1.webp"
       hoverImage="/img/utv-2.webp"
@@ -35,7 +37,7 @@ import VehiclesCard from '../VehiclesCard.astro';
 </section>
 
 <style>
-  #section-3 {
+  #categorias {
     width: 100%;
   }
 </style>

@@ -2,19 +2,21 @@
 import Badge from '../Badge.astro';
 ---
 
-<section id="section-2" class="h-screen flex flex-col">
-  <div class="h-[15vh] flex justify-center items-center w-full gap-[120px]">
-    <Badge title="6,000 +" subtitle="ASISTENTES" />
+<section id="nosotros" class="h-screen flex flex-col md:pt-3">
+  <div
+    class="h-[10vh] flex justify-center items-center w-full md:gap-[120px] gap-[20px]"
+  >
+    <Badge title="6,000 +" subtitle="ASISTENTES" className="hidden" />
     <Badge title="200 +" subtitle="CORREDORES" />
     <Badge title="16" subtitle="SHOWS" />
     <Badge title="2" subtitle="DÍAS" />
   </div>
   <div class="fondo-utv object-cover h-full relative">
     <div class="fondo-utv__descripcion absolute top-25 left-0 w-fit text-white">
-      <h1 class="font-[microgramma] text-[36px]">
+      <h1 class="font-[microgramma] md:text-[36px] text-[20px]">
         INFIERNO <span class="text-[#c8f600]">VERDE</span>
       </h1>
-      <p class="font-[inter-regular] text-[24px]">
+      <p class="font-[inter-regular] md:text-[24px] text-[16px]">
         Somos una de las competencias de enduro <br /> más intensas y reconocidas
         del Perú. Con sede <br /> en la ciudad de Tarapoto. Su desafiante <br />
         recorrido a través de terrenos extremos <br /> le ha valido el nombre de
@@ -25,7 +27,7 @@ import Badge from '../Badge.astro';
 </section>
 
 <style>
-  #section-2 {
+  #nosotros {
     width: 100%;
 
     .fondo-utv {

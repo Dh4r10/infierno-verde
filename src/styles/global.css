@@ -30,3 +30,9 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'inter-medium';
+  src: url('/fonts/inter-medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

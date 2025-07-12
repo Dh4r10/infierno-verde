@@ -2,21 +2,24 @@
 import Calender from '../Calender.astro';
 ---
 
-<section id="section-4" class="h-screen flex flex-col">
-  <div class="h-[15vh] flex justify-center items-center w-full gap-[120px]">
-    <h1 class="font-[microgramma] text-[36px] text-[#c8f600]">CALENDARIO</h1>
+<section id="calendario" class="md:h-screen flex flex-col">
+  <div class="md:p-8 p-6 flex justify-center items-center w-full">
+    <h1 class="font-[microgramma] md:text-[36px] text-[20px] text-[#c8f600]">
+      CALENDARIO
+    </h1>
   </div>
-  <div class="fondo-utv object-cover h-full flex flex-row gap-5">
-    <div class="flex flex-col flex-1/2 justify-center pb-10">
-      <div class="flex flex-col gap-y-7">
+  <div class="fondo-utv object-cover h-full flex md:flex-row flex-col gap-5">
+    <div class="flex flex-col flex-1/2 justify-center md:pb-10 pb-0">
+      <div class="flex flex-col md:gap-y-7 gap-y-3">
         <h1
-          class="font-[microgramma] text-[32px] text-white flex items-center gap-1"
+          class="font-[microgramma] md:text-[32px] text-[16px] text-white flex items-center md:justify-start justify-center gap-1"
         >
           DÍA 1 <span
             class="presentacion-container__text-separador text-[#E7E7E7] pb-1"
             >|</span
           >
-          <span class="font-[inter-boldItalic] text-[#E7E7E7] text-[16px]"
+          <span
+            class="font-[inter-boldItalic] text-[#E7E7E7] md:text-[16px] text-[12px]"
             >23/08/2025</span
           >
         </h1>
@@ -28,15 +31,16 @@ import Calender from '../Calender.astro';
       </div>
     </div>
     <div class="flex flex-col flex-1/2 justify-center pb-10">
-      <div class="flex flex-col gap-y-7">
+      <div class="flex flex-col md:gap-y-7 gap-y-3">
         <h1
-          class="font-[microgramma] text-[32px] text-white flex items-center gap-1"
+          class="font-[microgramma] md:text-[32px] text-[16px] text-white flex items-center md:justify-start justify-center gap-1"
         >
           DÍA 2 <span
             class="presentacion-container__text-separador text-[#E7E7E7] pb-1"
             >|</span
           >
-          <span class="font-[inter-boldItalic] text-[#E7E7E7] text-[16px]"
+          <span
+            class="font-[inter-boldItalic] text-[#E7E7E7] md:text-[16px] text-[12px]"
             >24/08/2025</span
           >
         </h1>
@@ -51,7 +55,7 @@ import Calender from '../Calender.astro';
 </section>
 
 <style>
-  #section-4 {
+  #calendario {
     width: 100%;
     padding: 0 80px;
 
