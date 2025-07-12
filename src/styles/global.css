@@ -36,3 +36,15 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'inter-thin';
+  src: url('/fonts/inter-thin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'inter-light';
+  src: url('/fonts/inter-light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

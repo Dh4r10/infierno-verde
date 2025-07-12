@@ -1,12 +1,24 @@
 ---
+import Image from 'astro/components/Image.astro';
 import Calender from '../Calender.astro';
 ---
 
 <section id="calendario" class="md:h-screen flex flex-col">
-  <div class="md:p-8 p-6 flex justify-center items-center w-full">
-    <h1 class="font-[microgramma] md:text-[36px] text-[20px] text-[#c8f600]">
+  <div class="md:p-8 p-6 flex justify-center items-center w-full gap-3">
+    <h1
+      class="font-[microgramma] md:text-[36px] text-[20px] text-[#c8f600] gap-2"
+    >
       CALENDARIO
     </h1>
+    <p class="font-[microgramma] text-white md:text-[30px] pb-1">|</p>
+    <Image
+      src="/img/logo.webp"
+      alt="Logo Tarapoto"
+      class="md:w-[100px] w-[50px]"
+      loading="lazy"
+      width={200}
+      height={200}
+    />
   </div>
   <div class="fondo-utv object-cover h-full flex md:flex-row flex-col gap-5">
     <div class="flex flex-col flex-1/2 justify-center md:pb-10 pb-0">
