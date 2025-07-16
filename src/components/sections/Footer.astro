@@ -3,6 +3,40 @@ import Image from 'astro/components/Image.astro';
 ---
 
 <footer class="bg-[#C8F600] shadow-sm backdrop-blur-lg h-fit">
+  <div
+    class="w-full flex md:items-center md:px-[80px] px-[30px] font-[inter-regular] bg-black md:text-sm text-[10px]"
+  >
+    <!-- <span class="text-gray-500 sm:text-center dark:text-[#C8F600] w-fit p-4">
+      PATROCINADORES:
+    </span> -->
+
+    <div class="w-full flex items-center justify-center md:gap-28 gap-16 p-4">
+      <Image
+        src="/img/kubota.webp"
+        alt="Kubota Logo"
+        class="md:w-[8%] aspect-auto w-[20%]"
+        loading="lazy"
+        width={200}
+        height={200}
+      />
+      <Image
+        src="/img/disagro.webp"
+        alt="Disagro Logo"
+        class="md:w-[8%] aspect-auto w-[20%]"
+        loading="lazy"
+        width={200}
+        height={200}
+      />
+      <Image
+        src="/img/kobelco.webp"
+        alt="Kobelco Logo"
+        class="md:w-[8%] aspect-auto w-[20%]"
+        loading="lazy"
+        width={200}
+        height={200}
+      />
+    </div>
+  </div>
   <div class="flex">
     <div
       class="md:px-[80px] px-[30px] md:py-12 py-8 w-full flex md:flex-row flex-col-reverse justify-between items-center md:gap-0 gap-y-4"
