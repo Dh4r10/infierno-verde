@@ -9,7 +9,7 @@ import Image from 'astro/components/Image.astro';
     </h1>
   </div>
   <div class="flex md:flex-row flex-col-reverse h-full">
-    <div class="relative mb:w-2/4 w-full flex flex-col bg-[#2a2a2b]">
+    <!-- <div class="relative mb:w-2/4 w-full flex flex-col bg-[#2a2a2b]">
       <div
         class="absolute inset-0 bg-[url('/img/textura-metalica.webp')] bg-cover bg-center opacity-40 pointer-events-none scale-x-[-1]"
       >
@@ -31,23 +31,21 @@ import Image from 'astro/components/Image.astro';
           2024 - <span class="text-[#c8f600]">CIRCUITO</span>
         </p>
       </div>
-    </div>
+    </div> -->
 
-    <div
-      class="relative mb:w-2/4 w-full flex flex-col bg-[#2a2a2b] overflow-hidden"
-    >
+    <div class="relative h-full w-full flex flex-col bg-[#2a2a2b]">
       <div
         class="absolute inset-0 bg-[url('/img/textura-metalica.webp')] bg-cover bg-center opacity-40 pointer-events-none"
       >
       </div>
 
       <div
-        class="h-[90%] flex flex-col justify-center items-center md:gap-4 gap-2 md:pt-0 md:pb-4 py-10 px-8 relative z-10"
+        class="h-full flex flex-col justify-center items-center gap-4 px-8 relative z-10"
       >
         <Image
           src="/img/tornillo.webp"
           alt="Tornillo"
-          class="absolute top-3 left-3 md:w-8 w-5"
+          class="absolute md:top-5 top-3 md:left-5 left-3 md:w-10 w-6"
           loading="lazy"
           width={30}
           height={30}
@@ -55,7 +53,7 @@ import Image from 'astro/components/Image.astro';
         <Image
           src="/img/tornillo.webp"
           alt="Tornillo"
-          class="absolute top-3 right-3 md:w-8 w-5"
+          class="absolute md:top-5 top-3 md:right-5 right-3 md:w-10 w-6"
           loading="lazy"
           width={30}
           height={30}
@@ -63,7 +61,7 @@ import Image from 'astro/components/Image.astro';
         <Image
           src="/img/tornillo.webp"
           alt="Tornillo"
-          class="absolute bottom-3 left-3 md:w-8 w-5"
+          class="absolute md:bottom-5 bottom-3 md:left-5 left-3 md:w-10 w-6"
           loading="lazy"
           width={30}
           height={30}
@@ -71,7 +69,7 @@ import Image from 'astro/components/Image.astro';
         <Image
           src="/img/tornillo.webp"
           alt="Tornillo"
-          class="absolute bottom-3 right-3 md:w-8 w-5"
+          class="absolute md:bottom-5 bottom-3 md:right-5 right-3 md:w-10 w-6"
           loading="lazy"
           width={30}
           height={30}
@@ -79,19 +77,19 @@ import Image from 'astro/components/Image.astro';
         <Image
           src="/img/martin-cardenas.webp"
           alt="Logo Martin Cardenas"
-          class="md:w-[40%] w-[60%] object-cover"
+          class="md:w-[30%] w-[70%] object-cover"
           loading="lazy"
           width={600}
           height={600}
         />
         <p
-          class="font-[microgramma] md:block hidden md:text-[24px] text-[13px] text-white text-center"
+          class="font-[microgramma] md:text-[28px] text-[18px] text-white text-center"
         >
-          <span class="text-white/85">PISTA EMBLEMA</span>
+          <span class="text-white/85">PISTA ENDURO</span>
         </p>
         <div class="flex items-center md:gap-6">
           <p class="w-fit font-[microgramma] text-white text-center">
-            <span class="md:text-[20px] text-[12px] text-white/85">
+            <span class="md:text-[24px] text-[14px] text-white/85">
               UBICADO EN:
               <span class="text-[#fe8415]">
                 CARRETERA <br /> FERNANDO BELAUNDE TERRY SUR
@@ -102,13 +100,13 @@ import Image from 'astro/components/Image.astro';
         </div>
       </div>
 
-      <div class="md:h-[10%] flex justify-center items-center bg-black z-10">
+      <!-- <div class="md:h-[10%] flex justify-center items-center bg-black z-10">
         <p
           class="font-[microgramma] md:text-[20px] text-[12px] text-white md:py-0 py-3"
         >
           2025 - <span class="text-[#c8f600]">PROXIMAMENTE</span>
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
